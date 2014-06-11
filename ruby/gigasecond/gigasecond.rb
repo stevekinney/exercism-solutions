@@ -2,12 +2,14 @@ class Gigasecond
   
   attr_reader :birthday
   
+  GIGASECOND = 10**9
+  
   def initialize(birthday)
     @birthday = birthday.to_time
   end
   
   def date
-    Time.at(birthday + 10**9).to_date
+    (birthday + GIGASECOND).to_date
   end
   
 end
